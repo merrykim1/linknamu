@@ -7,7 +7,7 @@ export default function LinkCard({ link }: { link: LinkItem }) {
       href={link.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block w-full rounded-2xl border border-[var(--foreground)]/20 bg-[var(--card)] px-5 py-4 text-center text-sm font-medium transition-colors hover:border-[var(--foreground)]/40 hover:bg-[var(--card)]/80"
+      className="block w-full rounded-2xl border border-[var(--card-border)] bg-[var(--card)] px-5 py-4 text-center text-sm font-medium text-[var(--foreground)] shadow-[0_8px_24px_-12px_var(--card-shadow)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_var(--card-shadow)]"
     >
       {link.label}
     </a>
