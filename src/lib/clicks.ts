@@ -1,4 +1,4 @@
-import clientPromise from "@/lib/mongodb";
+import getMongoClientPromise from "@/lib/mongodb";
 
 type ClickDoc = {
   _id: string; // link id
@@ -9,7 +9,7 @@ const DB_NAME = "linknamu";
 const COLLECTION_NAME = "clicks";
 
 async function getClicksCollection() {
-  const client = await clientPromise;
+  const client = await getMongoClientPromise();
   return client.db(DB_NAME).collection<ClickDoc>(COLLECTION_NAME);
 }
 
