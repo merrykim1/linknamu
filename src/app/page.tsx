@@ -1,6 +1,6 @@
 import DarkModeToggle from "@/components/DarkModeToggle";
 import ProfileHeader from "@/components/ProfileHeader";
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import { profile, links } from "@/data/profile";
 
 export default function Home() {
@@ -13,11 +13,7 @@ export default function Home() {
 
         <ProfileHeader profile={profile} />
 
-        <div className="flex w-full flex-col gap-4 px-2 sm:px-4">
-          {links.map((link) => (
-            <LinkCard key={link.id} link={link} />
-          ))}
-        </div>
+        <LinkList links={links} />
 
         <span aria-hidden className="text-lg tracking-widest opacity-40">
           ···
